@@ -1,3 +1,9 @@
+## [1.0.2](https://github.com/StoopidCompany/EKS-INATOR/compare/v1.0.1...v1.0.2) (2024-08-18)
+
+### Bug Fixes
+
+* exporting the arn of the cluster role ([#4](https://github.com/StoopidCompany/EKS-INATOR/issues/4)) ([04401a7](https://github.com/StoopidCompany/EKS-INATOR/commit/04401a7dcee53139ee2380255e6963183aae50c1))
+
 ## [1.0.1](https://github.com/StoopidCompany/EKS-INATOR/compare/v1.0.0...v1.0.1) (2024-08-18)
 
 ### Bug Fixes

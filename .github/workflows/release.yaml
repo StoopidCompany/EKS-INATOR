@@ -25,4 +25,4 @@ jobs:
         name: Release tag to GitHub
         env:
           GITHUB_TOKEN: ${{ secrets.SEMANTIC_RELEASE_TOKEN }}
-        run: npx semantic-release
+        run: npx semantic-release -e .config/releaserc.yaml

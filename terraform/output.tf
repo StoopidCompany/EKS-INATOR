@@ -63,6 +63,11 @@ output "eks_cluster_oidc_issuer_url" {
   value       = module.eks.eks_cluster_oidc_issuer_url
 }
 
+output "eks_cluster_iam_role_arn" {
+  description = "The IAM role ARN for the node group for the cluster"
+  value       = module.eks.eks_cluster_iam_role_arn
+}
+
 ################################################################################
 # VPC
 ################################################################################

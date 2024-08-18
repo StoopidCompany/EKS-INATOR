@@ -1,3 +1,9 @@
+## [1.0.3](https://github.com/StoopidCompany/EKS-INATOR/compare/v1.0.2...v1.0.3) (2024-08-18)
+
+### Bug Fixes
+
+* exporting the node_group arn ([#6](https://github.com/StoopidCompany/EKS-INATOR/issues/6)) ([7f29f43](https://github.com/StoopidCompany/EKS-INATOR/commit/7f29f4329d73355518b8b106f0fc0eb97830f726)), closes [#5](https://github.com/StoopidCompany/EKS-INATOR/issues/5)
+
 ## [1.0.2](https://github.com/StoopidCompany/EKS-INATOR/compare/v1.0.1...v1.0.2) (2024-08-18)
 
 ### Bug Fixes

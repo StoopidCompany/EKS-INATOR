@@ -4,6 +4,28 @@ variable "account_id" {
   nullable    = false
 }
 
+variable "name" {
+  description = "The common name for resources"
+  type        = string
+  nullable    = false
+}
+
+variable "region" {
+  description = "The AWS region"
+  type        = string
+  nullable    = false
+}
+
+variable "stage" {
+  description = "The environment stage"
+  type        = string
+  nullable    = false
+}
+
+################################################################################
+# EKS
+################################################################################
+
 variable "eks_cluster_version" {
   description = "The Kubernetes version to deploy"
   type        = string
@@ -13,8 +35,12 @@ variable "eks_cluster_version" {
 variable "eks_general_node_group_size" {
   description = "The EC2 instance size of the managed node_group"
   type        = string
-  default     = "t3.medium"
+  nullable    = false
 }
+
+################################################################################
+# IAM
+################################################################################
 
 variable "iam_eks_ec2_permissions_arn" {
   description = "The ARN for the permissions for EKS to use EC2"
@@ -28,23 +54,9 @@ variable "iam_eks_ecr_permissions_arn" {
   nullable    = false
 }
 
-variable "name" {
-  description = "The common name for resources"
-  type        = string
-  nullable    = false
-}
-
-variable "region" {
-  description = "The AWS region"
-  type        = string
-  default     = "us-east-1"
-}
-
-variable "stage" {
-  description = "The environment stage"
-  type        = string
-  nullable    = false
-}
+################################################################################
+# VPC
+################################################################################
 
 variable "vpc_id" {
   description = "The VPC this will belong to"

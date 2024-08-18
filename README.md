@@ -26,15 +26,26 @@
 |------|------|
 | [aws_iam_policy.eks_ec2_permissions](https://registry.terraform.io/providers/hashicorp/aws/5.61.0/docs/resources/iam_policy) | resource |
 | [aws_iam_policy.eks_ecr_permissions](https://registry.terraform.io/providers/hashicorp/aws/5.61.0/docs/resources/iam_policy) | resource |
-| [aws_caller_identity._](https://registry.terraform.io/providers/hashicorp/aws/5.61.0/docs/data-sources/caller_identity) | data source |
-| [aws_region._](https://registry.terraform.io/providers/hashicorp/aws/5.61.0/docs/data-sources/region) | data source |
 
 ## Inputs
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
+| <a name="input_account_id"></a> [account\_id](#input\_account\_id) | The AWS account ID | `string` | n/a | yes |
+| <a name="input_eks_cluster_version"></a> [eks\_cluster\_version](#input\_eks\_cluster\_version) | The Kubernetes version to use | `string` | n/a | yes |
+| <a name="input_eks_general_node_group_size"></a> [eks\_general\_node\_group\_size](#input\_eks\_general\_node\_group\_size) | The EC2 instance size of the managed node\_group | `string` | `"t3.medium"` | no |
 | <a name="input_name"></a> [name](#input\_name) | The common name for resources. | `string` | n/a | yes |
-| <a name="input_rds_kms_key_id"></a> [rds\_kms\_key\_id](#input\_rds\_kms\_key\_id) | The KMS encryption key ARN for use by RDS. | `string` | n/a | yes |
+| <a name="input_rds_backup_retention_period"></a> [rds\_backup\_retention\_period](#input\_rds\_backup\_retention\_period) | How long to keep RDS backups | `number` | `0` | no |
+| <a name="input_rds_database_engine"></a> [rds\_database\_engine](#input\_rds\_database\_engine) | The type of database to run | `string` | `"aurora-postgresql"` | no |
+| <a name="input_rds_database_engine_mode"></a> [rds\_database\_engine\_mode](#input\_rds\_database\_engine\_mode) | The mode for the database | `string` | `"provisioned"` | no |
+| <a name="input_rds_database_engine_version"></a> [rds\_database\_engine\_version](#input\_rds\_database\_engine\_version) | The version of the database to use | `string` | `"15.3"` | no |
+| <a name="input_rds_instance_class"></a> [rds\_instance\_class](#input\_rds\_instance\_class) | The size of the RDS instance | `string` | `"db.serverless"` | no |
+| <a name="input_rds_kms_key_id"></a> [rds\_kms\_key\_id](#input\_rds\_kms\_key\_id) | The KMS encryption key for RDS | `string` | n/a | yes |
+| <a name="input_rds_password_rotation_automatically_after_days"></a> [rds\_password\_rotation\_automatically\_after\_days](#input\_rds\_password\_rotation\_automatically\_after\_days) | How many days between password rotations | `number` | `5` | no |
+| <a name="input_rds_scaling_max_capacity"></a> [rds\_scaling\_max\_capacity](#input\_rds\_scaling\_max\_capacity) | The max number of replicated dbs | `number` | `10` | no |
+| <a name="input_rds_scaling_min_capacity"></a> [rds\_scaling\_min\_capacity](#input\_rds\_scaling\_min\_capacity) | The minimum number of replicated dbs | `number` | `2` | no |
+| <a name="input_rds_skip_final_snapshot"></a> [rds\_skip\_final\_snapshot](#input\_rds\_skip\_final\_snapshot) | Do we skip the final snapshot on delete? | `bool` | `true` | no |
+| <a name="input_region"></a> [region](#input\_region) | The AWS region | `string` | n/a | yes |
 | <a name="input_stage"></a> [stage](#input\_stage) | The stage for this environment. | `string` | `"prod"` | no |
 
 ## Outputs

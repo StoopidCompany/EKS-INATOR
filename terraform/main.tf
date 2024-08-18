@@ -1,11 +1,3 @@
-data "aws_region" "_" {}
-data "aws_caller_identity" "_" {}
-
-locals {
-  account_id = data.aws_caller_identity._.account_id
-  region     = data.aws_region._.name
-}
-
 ################################################################################
 # Virtual Private Cloud
 ################################################################################
@@ -38,8 +30,8 @@ resource "aws_iam_policy" "eks_ec2_permissions" {
           "ec2:DescribeNetworkInterfaces"
         ],
         Resource = [
-          "arn:aws:ec2:${local.region}:${local.account_id}:volume/*",
-          "arn:aws:ec2:${local.region}:${local.account_id}:instance/*"
+          "arn:aws:ec2:${var.region}:${var.account_id}:volume/*",
+          "arn:aws:ec2:${var.region}:${var.account_id}:instance/*"
         ]
       }
     ]
@@ -61,7 +53,7 @@ resource "aws_iam_policy" "eks_ecr_permissions" {
           "ecr:BatchCheckLayerAvailability"
         ],
         Resource = [
-          "arn:aws:ecr:${local.region}:${local.account_id}:repository/*"
+          "arn:aws:ecr:${var.region}:${var.account_id}:repository/*"
         ]
       }
     ]
@@ -75,13 +67,14 @@ resource "aws_iam_policy" "eks_ecr_permissions" {
 module "eks" {
   source = "./modules/eks"
 
-  account_id = local.account_id
-  region     = local.region
+  account_id = var.account_id
+  region     = var.region
 
   name  = var.name
   stage = var.stage
 
-  eks_cluster_version = "1.3"
+  eks_cluster_version         = var.eks_cluster_version
+  eks_general_node_group_size = var.eks_general_node_group_size
 
   iam_eks_ec2_permissions_arn = aws_iam_policy.eks_ec2_permissions.arn
   iam_eks_ecr_permissions_arn = aws_iam_policy.eks_ecr_permissions.arn
@@ -103,7 +96,19 @@ module "aurora" {
   name  = var.name
   stage = var.stage
 
+  rds_backup_retention_period = var.rds_backup_retention_period
+  rds_database_engine         = var.rds_database_engine
+  rds_database_engine_version = var.rds_database_engine_version
+  rds_database_engine_mode    = var.rds_database_engine_mode
+
+  rds_instance_class = var.rds_instance_class
+
   rds_kms_key_id = var.rds_kms_key_id
+
+  rds_password_rotation_automatically_after_days = var.rds_password_rotation_automatically_after_days
+  rds_scaling_max_capacity                       = var.rds_scaling_max_capacity
+  rds_scaling_min_capacity                       = var.rds_scaling_min_capacity
+  rds_skip_final_snapshot                        = var.rds_skip_final_snapshot
 
   vpc_id                          = module.vpc.vpc_id
   vpc_database_subnet_group_name  = module.vpc.vpc_database_subnet_group_name

@@ -17,31 +17,31 @@ variable "stage" {
 variable "rds_backup_retention_period" {
   description = "How long to keep RDS backups"
   type        = number
-  default     = 0
+  nullable    = false
 }
 
 variable "rds_database_engine" {
   description = "The type of database to run"
   type        = string
-  default     = "aurora-postgresql"
+  nullable    = false
 }
 
 variable "rds_database_engine_version" {
   description = "The version of the database to use"
   type        = string
-  default     = "15.3"
+  nullable    = false
 }
 
 variable "rds_database_engine_mode" {
   description = "The mode for the database"
   type        = string
-  default     = "provisioned"
+  nullable    = false
 }
 
 variable "rds_instance_class" {
   description = "The size of the RDS instance"
   type        = string
-  default     = "db.serverless"
+  nullable    = false
 }
 
 variable "rds_kms_key_id" {
@@ -53,25 +53,25 @@ variable "rds_kms_key_id" {
 variable "rds_password_rotation_automatically_after_days" {
   description = "How many days between password rotations"
   type        = number
-  default     = 5
+  nullable    = false
 }
 
 variable "rds_scaling_max_capacity" {
   description = "The max number of replicated dbs"
   type        = number
-  default     = 10
+  nullable    = false
 }
 
 variable "rds_scaling_min_capacity" {
   description = "The minimum number of replicated dbs"
   type        = number
-  default     = 2
+  nullable    = false
 }
 
 variable "rds_skip_final_snapshot" {
   description = "Do we skip the final snapshot on delete?"
   type        = bool
-  default     = true
+  nullable    = false
 }
 
 ################################################################################

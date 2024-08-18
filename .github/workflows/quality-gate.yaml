@@ -1,0 +1,62 @@
+name: Quality gate
+on:
+  pull_request:
+    types:
+      - opened
+      - synchronize
+      - reopened
+      - ready_for_review
+    branches:
+      - main
+  workflow_dispatch:
+permissions: read-all
+jobs:
+  tf-lint:
+    if: ${{ github.event.pull_request.draft == false }}
+    name: Terraform lint scan
+    runs-on: ubuntu-latest
+    steps:
+      - id: checkout
+        uses: actions/checkout@v4
+      - id: tflint-setup
+        uses: terraform-linters/setup-tflint@v4
+        with: 
+          tflint_version: v0.51.1
+      - id: tflint-scan
+        name: TFLint scan 
+        run: make tf-lint
+
+  terraform-validate:
+    if: ${{ github.event.pull_request.draft == false }}
+    name: Terraform validation
+    runs-on: ubuntu-latest
+    steps:
+      - id: checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - id: terraform-setup 
+        uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: "1.8.4"
+      - id: terraform-scan
+        name: Terraform validation
+        run: make tf-validate
+
+  security-scan:
+    if: ${{ github.event.pull_request.draft == false }}
+    name: Security scan
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      actions: read
+    steps:
+      - id: checkout
+        uses: actions/checkout@v3
+      - id: checkov-scan
+        name: Checkov scan
+        uses: bridgecrewio/checkov-action@v12
+        with:
+          output_format: cli
+          output_file_path: console
+          config_file: .config/.checkov.yaml

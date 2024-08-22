@@ -1,3 +1,9 @@
+## [1.1.2](https://github.com/StoopidCompany/EKS-INATOR/compare/v1.1.1...v1.1.2) (2024-08-22)
+
+### Bug Fixes
+
+* fixing typo ([#10](https://github.com/StoopidCompany/EKS-INATOR/issues/10)) ([5f9a942](https://github.com/StoopidCompany/EKS-INATOR/commit/5f9a942c98b2ca74d2bb4e5ecc5d6e8e01da1cdf))
+
 ## [1.1.1](https://github.com/StoopidCompany/EKS-INATOR/compare/v1.1.0...v1.1.1) (2024-08-22)
 
 ### Bug Fixes

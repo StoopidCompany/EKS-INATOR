@@ -40,7 +40,7 @@ variable "eks_default_node_group_size" {
 
 variable "eks_default_disk_size" {
   description = "The disk size for the default group"
-  type        = string
+  type        = number
   default     = 20
 }
 

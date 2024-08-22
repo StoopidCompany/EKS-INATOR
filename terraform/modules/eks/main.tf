@@ -61,7 +61,7 @@ module "eks" {
 resource "aws_iam_policy_attachment" "eks_ec2_permissions" {
   name = "EKSEC2Permissions"
   roles = [
-    module.eks.eks_managed_node_groups.general.iam_role_name
+    module.eks.eks_managed_node_groups.default.iam_role_name
   ]
   policy_arn = var.iam_eks_ec2_permissions_arn
 }
@@ -69,7 +69,7 @@ resource "aws_iam_policy_attachment" "eks_ec2_permissions" {
 resource "aws_iam_policy_attachment" "eks_ecr_permissions" {
   name = "EKSECRPermissions"
   roles = [
-    module.eks.eks_managed_node_groups.general.iam_role_name
+    module.eks.eks_managed_node_groups.default.iam_role_name
   ]
   policy_arn = var.iam_eks_ecr_permissions_arn
 }

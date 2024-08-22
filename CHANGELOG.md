@@ -1,3 +1,9 @@
+## [1.1.4](https://github.com/StoopidCompany/EKS-INATOR/compare/v1.1.3...v1.1.4) (2024-08-22)
+
+### Bug Fixes
+
+* gorram general to default ([#12](https://github.com/StoopidCompany/EKS-INATOR/issues/12)) ([196faee](https://github.com/StoopidCompany/EKS-INATOR/commit/196faee30ced241aaa18608041e1cd484d396b23))
+
 ## [1.1.3](https://github.com/StoopidCompany/EKS-INATOR/compare/v1.1.2...v1.1.3) (2024-08-22)
 
 ### Bug Fixes

@@ -74,7 +74,8 @@ module "eks" {
   stage = var.stage
 
   eks_cluster_version         = var.eks_cluster_version
-  eks_general_node_group_size = var.eks_general_node_group_size
+  eks_default_node_group_size = var.eks_default_node_group_size
+  eks_default_disk_size       = var.eks_default_disk_size
 
   iam_eks_ec2_permissions_arn = aws_iam_policy.eks_ec2_permissions.arn
   iam_eks_ecr_permissions_arn = aws_iam_policy.eks_ecr_permissions.arn

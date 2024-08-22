@@ -33,17 +33,18 @@ module "eks" {
 
   # EKS Managed Node Group
   eks_managed_node_groups = {
-    general = {
+    default = {
       name = var.stage
 
-      instance_types = [var.eks_general_node_group_size]
+      instance_types = [var.eks_default_node_group_size]
+      disk_size      = var.eks_default_disk_size
 
       min_size     = 1
       max_size     = 10
       desired_size = 1
 
       labels = {
-        role = "general"
+        role = "default"
       }
     }
   }

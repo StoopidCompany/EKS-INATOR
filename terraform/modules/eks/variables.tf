@@ -32,8 +32,14 @@ variable "eks_cluster_version" {
   nullable    = false
 }
 
-variable "eks_general_node_group_size" {
+variable "eks_default_node_group_size" {
   description = "The EC2 instance size of the managed node_group"
+  type        = string
+  nullable    = false
+}
+
+variable "eks_default_disk_size" {
+  description = "The disk size for the default group"
   type        = string
   nullable    = false
 }

@@ -33,7 +33,7 @@
 |------|-------------|------|---------|:--------:|
 | <a name="input_account_id"></a> [account\_id](#input\_account\_id) | The AWS account ID | `string` | n/a | yes |
 | <a name="input_eks_cluster_version"></a> [eks\_cluster\_version](#input\_eks\_cluster\_version) | The Kubernetes version to use | `string` | n/a | yes |
-| <a name="input_eks_default_disk_size"></a> [eks\_default\_disk\_size](#input\_eks\_default\_disk\_size) | The disk size for the default group | `string` | `20` | no |
+| <a name="input_eks_default_disk_size"></a> [eks\_default\_disk\_size](#input\_eks\_default\_disk\_size) | The disk size for the default group | `number` | `20` | no |
 | <a name="input_eks_default_node_group_size"></a> [eks\_default\_node\_group\_size](#input\_eks\_default\_node\_group\_size) | The EC2 instance size of the managed node\_group | `string` | `"t3.2xlarge"` | no |
 | <a name="input_name"></a> [name](#input\_name) | The common name for resources. | `string` | n/a | yes |
 | <a name="input_rds_backup_retention_period"></a> [rds\_backup\_retention\_period](#input\_rds\_backup\_retention\_period) | How long to keep RDS backups | `number` | `0` | no |

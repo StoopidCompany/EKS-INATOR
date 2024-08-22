@@ -1,3 +1,9 @@
+## [1.1.1](https://github.com/StoopidCompany/EKS-INATOR/compare/v1.1.0...v1.1.1) (2024-08-22)
+
+### Bug Fixes
+
+* wrong data type for disk size ([#9](https://github.com/StoopidCompany/EKS-INATOR/issues/9)) ([65b5e8d](https://github.com/StoopidCompany/EKS-INATOR/commit/65b5e8d14358e582f6e588a733cf51ca847ea9f2))
+
 ## [1.1.0](https://github.com/StoopidCompany/EKS-INATOR/compare/v1.0.3...v1.1.0) (2024-08-22)
 
 ### Features

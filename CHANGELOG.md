@@ -1,3 +1,9 @@
+## [1.1.0](https://github.com/StoopidCompany/EKS-INATOR/compare/v1.0.3...v1.1.0) (2024-08-22)
+
+### Features
+
+* allowing custom disk sizes for default group ([#8](https://github.com/StoopidCompany/EKS-INATOR/issues/8)) ([197c9ba](https://github.com/StoopidCompany/EKS-INATOR/commit/197c9bac49b899645f9ec5dd5816d6eb7486d0ac))
+
 ## [1.0.3](https://github.com/StoopidCompany/EKS-INATOR/compare/v1.0.2...v1.0.3) (2024-08-18)
 
 ### Bug Fixes

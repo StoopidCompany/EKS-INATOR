@@ -1,3 +1,9 @@
+## [1.1.5](https://github.com/StoopidCompany/EKS-INATOR/compare/v1.1.4...v1.1.5) (2024-08-22)
+
+### Bug Fixes
+
+* ignores the disk size param due to template ([#13](https://github.com/StoopidCompany/EKS-INATOR/issues/13)) ([0c78815](https://github.com/StoopidCompany/EKS-INATOR/commit/0c788156e209d01ea6b3797048d64b7318a9265b))
+
 ## [1.1.4](https://github.com/StoopidCompany/EKS-INATOR/compare/v1.1.3...v1.1.4) (2024-08-22)
 
 ### Bug Fixes

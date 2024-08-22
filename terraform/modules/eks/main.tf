@@ -46,6 +46,8 @@ module "eks" {
       labels = {
         role = "default"
       }
+
+      use_custom_launch_template = false
     }
   }
 

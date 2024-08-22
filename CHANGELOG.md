@@ -1,3 +1,9 @@
+## [1.1.3](https://github.com/StoopidCompany/EKS-INATOR/compare/v1.1.2...v1.1.3) (2024-08-22)
+
+### Bug Fixes
+
+* removing default role that doesnt work anyway ([#11](https://github.com/StoopidCompany/EKS-INATOR/issues/11)) ([5130273](https://github.com/StoopidCompany/EKS-INATOR/commit/513027359898898a6c3e350d3734520cd9579399))
+
 ## [1.1.2](https://github.com/StoopidCompany/EKS-INATOR/compare/v1.1.1...v1.1.2) (2024-08-22)
 
 ### Bug Fixes

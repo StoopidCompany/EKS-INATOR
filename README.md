@@ -64,7 +64,6 @@
 | <a name="output_eks_cluster_endpoint"></a> [eks\_cluster\_endpoint](#output\_eks\_cluster\_endpoint) | The endpoint for the base EKS cluster |
 | <a name="output_eks_cluster_iam_role_arn"></a> [eks\_cluster\_iam\_role\_arn](#output\_eks\_cluster\_iam\_role\_arn) | The IAM role ARN for the cluster |
 | <a name="output_eks_cluster_name"></a> [eks\_cluster\_name](#output\_eks\_cluster\_name) | The name of the base EKS cluster name |
-| <a name="output_eks_cluster_node_group_role_arn"></a> [eks\_cluster\_node\_group\_role\_arn](#output\_eks\_cluster\_node\_group\_role\_arn) | The IAM role ARN for the node group for the cluster |
 | <a name="output_eks_cluster_oidc_issuer_url"></a> [eks\_cluster\_oidc\_issuer\_url](#output\_eks\_cluster\_oidc\_issuer\_url) | The OIDC URL |
 | <a name="output_nat_public_ips"></a> [nat\_public\_ips](#output\_nat\_public\_ips) | The public IP for the NAT |
 | <a name="output_vpc_arn"></a> [vpc\_arn](#output\_vpc\_arn) | The base VPC ARN |
